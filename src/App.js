@@ -8,7 +8,6 @@ function App() {
         		<header>
 					<div>
 						<h1>SPLI</h1>
-          				<br />
           				<h1>TTER</h1>
 					</div>
           			
