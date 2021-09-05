@@ -1,0 +1,70 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	border:.5px solid red;
+}
+
+/* MAJOR PARENT STYLES */
+.container{
+	display:flex;
+	flex-flow:column nowrap;
+	/* align-content: center; */
+	/* justify-content: center; */
+}
+
+.calc-Parent{
+	width:100%;
+	display:flex;
+	flex-flow:column nowrap;
+	/* justify-content: center; */
+}
+
+/* BILL TOTAL STYLING */
+.bill-total-parent{
+	display:flex;
+	flex-flow:column nowrap;
+	align-items: center;
+}
+
+.bill-title{
+	width: 90%;
+	display:flex;
+	align-items: flex-start;
+}
+
+.bill-total{
+	width:90%;
+}
+
+.bill-total input{
+	width:100%;
+}
+
+/* TIP SELECTION STYLING */
+.tip-selection-parent{
+	display:flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.tip-perc{
+	width:90%;
+}
+
+.perc-buttons{
+	width:90%;
+	display:flex;
+	flex-flow:row wrap;
+
+}
+
+.button{
+	width:50%;
+}
+
+/* PARTY STYLING */
+
+
+
+/* TOTALS STYLING */
