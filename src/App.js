@@ -6,9 +6,12 @@ function App() {
     	<div className="App">
       		<div className="container">
         		<header>
-          			<h1>SPLI</h1>
-          			<br />
-          			<h1>TTER</h1>
+					<div>
+						<h1>SPLI</h1>
+          				<br />
+          				<h1>TTER</h1>
+					</div>
+          			
         		</header>
         		<main>
           			<div className="calc-parent">
@@ -23,7 +26,7 @@ function App() {
 						</div>
 
 						<div className="tip-selection-parent">
-							<div className="tip-perc">
+							<div className="tip-perc-title">
 								<h3>Select Tip %</h3>
 							</div>
 							<div className="perc-buttons">
@@ -36,18 +39,18 @@ function App() {
 							</div>
           				</div>
 
-						<div className="people-count">
-							<div>
+						<div className="party-count">
+							<div className="party-title">
 								<h3>Number of People</h3>
 							</div>
 
-							<div>
-								<input placeholder="5"></input>
+							<div className="party-input-parent">
+								<input className="party-input" placeholder="5"></input>
 							</div>
 						</div>
 
-						<div className="totals">
-							<div className="tip-amount">
+						<div className="results-parent">
+							<div className="tip-amount-parent">
 								<div>
 									<h3>Tip Amount</h3>
 									<p>/ person</p>
@@ -69,7 +72,7 @@ function App() {
 								</div>
 							</div>
 
-							<button>RESET</button>
+							<button className="reset-button">RESET</button>
 						</div>
 		  			</div>
         		</main>
