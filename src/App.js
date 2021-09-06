@@ -14,37 +14,38 @@ function App() {
         		</header>
         		<main>
           			<div className="calc-parent">
-
-						<div className="bill-total-parent">
-							<div className="bill-title">
-								<h2>Bill</h2>
-							</div>
-							<div className="bill-total">
-								<input placeholder="$"></input>
-							</div>
-						</div>
-
-						<div className="tip-selection-parent">
-							<div className="tip-perc-title">
-								<h3>Select Tip %</h3>
-							</div>
-							<div className="perc-buttons">
-								<button className="button">5%</button>
-								<button className="button">10%</button>
-								<button className="button">15%</button>
-								<button className="button">25%</button>
-								<button className="button">50%</button>
-								<button className="button">Custom</button>
-							</div>
-          				</div>
-
-						<div className="party-count">
-							<div className="party-title">
-								<h3>Number of People</h3>
+						<div className="left-side">
+							<div className="bill-total-parent">
+								<div className="bill-title">
+									<h2>Bill</h2>
+								</div>
+								<div className="bill-total">
+									<input placeholder="$"></input>
+								</div>
 							</div>
 
-							<div className="party-input-parent">
-								<input className="party-input" placeholder="5"></input>
+							<div className="tip-selection-parent">
+								<div className="tip-perc-title">
+									<h3>Select Tip %</h3>
+								</div>
+								<div className="perc-buttons">
+									<button className="button">5%</button>
+									<button className="button">10%</button>
+									<button className="button">15%</button>
+									<button className="button">25%</button>
+									<button className="button">50%</button>
+									<button className="button">Custom</button>
+								</div>
+							</div>
+
+							<div className="party-count">
+								<div className="party-title">
+									<h3>Number of People</h3>
+								</div>
+
+								<div className="party-input-parent">
+									<input className="party-input" placeholder="5"></input>
+								</div>
 							</div>
 						</div>
 
