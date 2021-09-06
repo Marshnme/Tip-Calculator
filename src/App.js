@@ -6,48 +6,51 @@ function App() {
     	<div className="App">
       		<div className="container">
         		<header>
-          			<h1>SPLI</h1>
-          			<br />
-          			<h1>TTER</h1>
+					<div>
+						<h1>SPLI</h1>
+          				<h1>TTER</h1>
+					</div>
+          			
         		</header>
         		<main>
           			<div className="calc-parent">
-
-						<div className="bill-total-parent">
-							<div className="bill-Parent">
-								<h2>Bill</h2>
+						<div className="left-side">
+							<div className="bill-total-parent">
+								<div className="bill-title">
+									<h2>Bill</h2>
+								</div>
+								<div className="bill-total">
+									<input placeholder="$"></input>
+								</div>
 							</div>
-							<div className="bill-Total">
-								<input placeholder="$"></input>
+
+							<div className="tip-selection-parent">
+								<div className="tip-perc-title">
+									<h3>Select Tip %</h3>
+								</div>
+								<div className="perc-buttons">
+									<button className="button">5%</button>
+									<button className="button">10%</button>
+									<button className="button">15%</button>
+									<button className="button">25%</button>
+									<button className="button">50%</button>
+									<button className="button">Custom</button>
+								</div>
+							</div>
+
+							<div className="party-count">
+								<div className="party-title">
+									<h3>Number of People</h3>
+								</div>
+
+								<div className="party-input-parent">
+									<input className="party-input" placeholder="5"></input>
+								</div>
 							</div>
 						</div>
 
-						<div className="tip-Selection">
-							<div>
-								<h3>Select Tip %</h3>
-							</div>
-							<div>
-								<button>5%</button>
-								<button>10%</button>
-								<button>15%</button>
-								<button>25%</button>
-								<button>50%</button>
-								<button>Custom</button>
-							</div>
-          				</div>
-
-						<div className="people-Count">
-							<div>
-								<h3>Number of People</h3>
-							</div>
-
-							<div>
-								<input placeholder="5"></input>
-							</div>
-						</div>
-
-						<div className="totals">
-							<div className="tip-Amount">
+						<div className="results-parent">
+							<div className="tip-amount-parent">
 								<div>
 									<h3>Tip Amount</h3>
 									<p>/ person</p>
@@ -58,7 +61,7 @@ function App() {
 								</div>
 							</div>
 
-							<div className="total-Per-Person">
+							<div className="total-per-person">
 								<div>
 									<h3>Total</h3>
 									<p>/ person</p>
@@ -69,7 +72,7 @@ function App() {
 								</div>
 							</div>
 
-							<button>RESET</button>
+							<button className="reset-button">RESET</button>
 						</div>
 		  			</div>
         		</main>

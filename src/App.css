@@ -1,0 +1,210 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	/* border:1px solid red; */
+}
+
+
+
+/* MAJOR PARENT STYLES */
+
+body{
+	background-color:lightblue
+}
+main{
+	display:flex;
+	justify-content: center;
+	border:1px solid white;
+	background-color: white;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+.container{
+	display:flex;
+	flex-flow:column nowrap;
+	/* align-content: cener; */
+	/* justify-content: center; */
+}
+
+.calc-parent{
+	width:90%;
+	margin-top:1.5rem;
+	display:flex;
+	flex-flow:column nowrap;
+	height:auto;
+}
+
+/* ////////////////////////// */
+
+/* HEADER STYLING */
+
+header{
+	display:flex;
+	justify-content: center;
+	margin-top:2rem;
+	margin-bottom:2rem
+}
+
+
+
+/* //////////////////// */
+/* BILL TOTAL STYLING */
+.bill-total-parent{
+	display:flex;
+	flex-flow:column nowrap;
+	align-items: center;
+	margin-bottom:1.5rem;
+}
+
+.bill-title{
+	width:100%;
+	display:flex;
+	align-items: flex-start;
+	margin-bottom:.5rem;
+}
+
+.bill-total{
+	width:100%;
+}
+
+.bill-total input{
+	width:100%;
+	height:5vh;
+}
+
+/* ///////////////////////////////// */
+
+/* TIP SELECTION STYLING */
+.tip-selection-parent{
+	display:flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	margin-bottom:1rem;
+}
+
+.tip-perc-title{
+	width:100%;
+	display:flex;
+	align-items: flex-start;
+	margin-bottom:1rem;
+}
+
+.perc-buttons{
+	width:100%;
+	height:20vh;
+	display:flex;
+	flex-flow:row wrap;
+	align-items: space-around;
+	justify-content: space-between;
+
+}
+
+.button{
+	width:48%;
+	height:5vh;
+	
+}
+
+
+/* ////////////////////////////////// */
+/* PARTY STYLING */
+
+.party-count{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	margin-bottom:1.5rem;
+}
+
+.party-title{
+	width:100%;
+	display:flex;
+	align-items: flex-start;
+	margin-bottom:.5rem;
+}
+
+.party-input-parent{
+	width:100%;
+	display:flex;
+	align-items: flex-end;
+}
+
+.party-input{
+	width:100%;
+	height:5vh;
+}
+
+/* //////////////////////////// */
+/* RESULTS STYLING */
+
+
+.results-parent{
+	display:flex;
+	flex-flow:column nowrap;
+	align-items: center;
+	justify-content: space-around;
+	border:1px solid blue;
+	/* width:100%; */
+	height:32vh;	
+	/* margin-bottom:2rem; */
+}
+
+.tip-amount-parent{
+	display:flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	margin-top: 1rem;
+	justify-content: space-between;
+}
+
+.total-per-person{
+	display:flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	/* height:5vh; */
+	justify-content: space-between;
+}
+
+.reset-button{
+	width:90%;
+	height:5vh;
+}
+
+.attribution{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* 800 PX MEDIA QUERY */
+@media only screen and (min-width: 800px) {
+	.calc-parent{
+		display:flex;
+		flex-flow:row nowrap;
+		justify-content: space-around;
+		width:100%;
+	}
+
+	.left-side{
+		width:45%;
+	}
+
+	.results-parent{
+		width:45%;
+		height:auto;
+	}
+	.container{
+		align-items: center;
+	}
+
+	main{
+		min-width: 70%;
+		border-radius: 25px;
+		
+	}
+}
