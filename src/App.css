@@ -24,7 +24,7 @@ main{
 .container{
 	display:flex;
 	flex-flow:column nowrap;
-	/* align-content: center; */
+	/* align-content: cener; */
 	/* justify-content: center; */
 }
 
@@ -197,5 +197,14 @@ header{
 	.results-parent{
 		width:45%;
 		height:auto;
+	}
+	.container{
+		align-items: center;
+	}
+
+	main{
+		min-width: 70%;
+		border-radius: 25px;
+		
 	}
 }
