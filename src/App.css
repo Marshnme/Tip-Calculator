@@ -193,7 +193,7 @@ header{
 	.left-side{
 		width:45%;
 		height:95%;
-		justify-content: space-around;
+		margin-top: 20px;
 	}
 
 	.results-parent{
@@ -226,5 +226,10 @@ header{
 		width:30%;
 		/* height:10vh; */
 		
+	}
+
+	.tip-selection-parent{
+		margin-bottom:40px;
+		/* margin-top:10px; */
 	}
 }
