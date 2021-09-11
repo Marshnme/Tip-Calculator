@@ -47,7 +47,7 @@ function App() {
 									<button className="button" onClick={()=>setTip(.15)}>15%</button>
 									<button className="button" onClick={()=>setTip(.25)}>25%</button>
 									<button className="button" onClick={()=>setTip(.5)}>50%</button>
-									<button className="button">Custom</button>
+									<input className="button" placeholder="CUSTOM" onChange={(e)=>setTip(e.target.value)}></input>
 								</div>
 							</div>
 {console.log(tipPerc)}
