@@ -5,15 +5,24 @@ import './App.css';
 
 function App() {
 
-	const [bill,setBill] = useState(0);
-	const [tipPerc,setTip] = useState(0);
-	const [people, setPeople] = useState(0);
-	const [tipTotal,setTipTotal] = useState(0);
-	const [total, setTotal] = useState(0);
+	const [bill,setBill] = useState([0]);
+	const [tipPerc,setTip] = useState([0]);
+	const [people, setPeople] = useState([0]);
+	const [tipTotal,setTipTotal] = useState([0]);
+	const [total, setTotal] = useState([0]);
 
-	useEffect(() => {
-		
-	  },[]);
+
+	let CalcTotal = (billProp,tipProp,peopleProp) =>{
+		let boo = billProp/peopleProp
+		setTotal(boo);
+		let booTwo = ((tipProp/billProp) / peopleProp)
+		setTipTotal(booTwo);
+	};
+
+	useEffect((bill,tipPerc,people) => {
+		console.log(bill,tipPerc,people)
+		CalcTotal(bill,tipPerc,people)
+	  },[bill,tipPerc,people]);
 
 	return (
     	<div className="App">
@@ -33,7 +42,7 @@ function App() {
 									<h2>Bill</h2>
 								</div>
 								<div className="bill-total">
-									<input placeholder="$" onChange={e => setBill(e.target.value)}></input>
+									<input type="number" placeholder="$" onChange={e => setBill(e.target.value)}></input>
 								</div>
 							</div>
 
@@ -42,7 +51,9 @@ function App() {
 									<h3>Select Tip %</h3>
 								</div>
 								<div className="perc-buttons">
-									<button className="button" onClick={()=>setTip(.05)}>5%</button>
+									<button className="button" onClick={()=>{
+										let fivePerc = .05
+										setTip(fivePerc)}}>5%</button>
 									<button className="button" onClick={()=>setTip(.10)}>10%</button>
 									<button className="button" onClick={()=>setTip(.15)}>15%</button>
 									<button className="button" onClick={()=>setTip(.25)}>25%</button>
@@ -50,18 +61,17 @@ function App() {
 									<input className="button" placeholder="CUSTOM" onChange={(e)=>setTip(e.target.value)}></input>
 								</div>
 							</div>
-{console.log(tipPerc)}
+
 							<div className="party-count">
 								<div className="party-title">
 									<h3>Number of People</h3>
 								</div>
 
 								<div className="party-input-parent">
-									<input className="party-input" placeholder="5"></input>
+									<input type="number" placeholder="5" onChange={e => setPeople(e.target.value)} className="party-input" ></input>
 								</div>
 							</div>
 						</div>
-
 						<div className="results-parent">
 							<div className="tip-amount-parent">
 								<div>
@@ -70,7 +80,7 @@ function App() {
 								</div>
 
 								<div>
-									<p>$4.27</p>
+									<p>{tipTotal}</p>
 								</div>
 							</div>
 
@@ -81,7 +91,7 @@ function App() {
 								</div>
 								
 								<div>
-									<p>$32.79</p>
+									<p>{total}</p>
 								</div>
 							</div>
 
@@ -91,7 +101,7 @@ function App() {
         		</main>
       		</div>
       
-			<div class="attribution">
+			<div className="attribution">
 				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
 				Coded by <a href="#">Your Name Here</a>.
 			</div>
