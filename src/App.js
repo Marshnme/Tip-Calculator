@@ -1,5 +1,5 @@
 
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import './App.css';
 
 
@@ -10,6 +10,10 @@ function App() {
 	const [people, setPeople] = useState(0);
 	const [tipTotal,setTipTotal] = useState(0);
 	const [total, setTotal] = useState(0);
+
+	useEffect(() => {
+		
+	  },[]);
 
 	return (
     	<div className="App">
@@ -38,15 +42,15 @@ function App() {
 									<h3>Select Tip %</h3>
 								</div>
 								<div className="perc-buttons">
-									<button className="button">5%</button>
-									<button className="button">10%</button>
-									<button className="button">15%</button>
-									<button className="button">25%</button>
-									<button className="button">50%</button>
+									<button className="button" onClick={()=>setTip(.05)}>5%</button>
+									<button className="button" onClick={()=>setTip(.10)}>10%</button>
+									<button className="button" onClick={()=>setTip(.15)}>15%</button>
+									<button className="button" onClick={()=>setTip(.25)}>25%</button>
+									<button className="button" onClick={()=>setTip(.5)}>50%</button>
 									<button className="button">Custom</button>
 								</div>
 							</div>
-
+{console.log(tipPerc)}
 							<div className="party-count">
 								<div className="party-title">
 									<h3>Number of People</h3>
