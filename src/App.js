@@ -1,7 +1,16 @@
 
+import React,{useState} from 'react';
 import './App.css';
 
+
 function App() {
+
+	const [bill,setBill] = useState(0);
+	const [tipPerc,setTip] = useState(0);
+	const [people, setPeople] = useState(0);
+	const [tipTotal,setTipTotal] = useState(0);
+	const [total, setTotal] = useState(0);
+
 	return (
     	<div className="App">
       		<div className="container">
@@ -20,7 +29,7 @@ function App() {
 									<h2>Bill</h2>
 								</div>
 								<div className="bill-total">
-									<input placeholder="$"></input>
+									<input placeholder="$" onChange={e => setBill(e.target.value)}></input>
 								</div>
 							</div>
 
