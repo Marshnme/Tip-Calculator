@@ -5,24 +5,26 @@ import './App.css';
 
 function App() {
 
-	const [bill,setBill] = useState([0]);
-	const [tipPerc,setTip] = useState([0]);
-	const [people, setPeople] = useState([0]);
-	const [tipTotal,setTipTotal] = useState([0]);
-	const [total, setTotal] = useState([0]);
+	const [bill,setBill] = useState(0);
+	const [tipPerc,setTip] = useState(0);
+	const [people, setPeople] = useState(0);
+	const [tipTotal,setTipTotal] = useState(0);
+	const [total, setTotal] = useState(0);
 
 
 	let CalcTotal = (billProp,tipProp,peopleProp) =>{
 		let boo = billProp/peopleProp
+		console.log(boo)
 		setTotal(boo);
-		let booTwo = ((tipProp/billProp) / peopleProp)
+		let booTwo = ((billProp*tipProp) / peopleProp )
+		console.log(booTwo)
 		setTipTotal(booTwo);
 	};
-
-	useEffect((bill,tipPerc,people) => {
+	console.log(bill)
+	useEffect(() => {
 		console.log(bill,tipPerc,people)
 		CalcTotal(bill,tipPerc,people)
-	  },[bill,tipPerc,people]);
+	  },[bill,tipPerc,people,tipTotal,total]);
 
 	return (
     	<div className="App">
@@ -51,14 +53,12 @@ function App() {
 									<h3>Select Tip %</h3>
 								</div>
 								<div className="perc-buttons">
-									<button className="button" onClick={()=>{
-										let fivePerc = .05
-										setTip(fivePerc)}}>5%</button>
+									<button className="button" onClick={()=>setTip(.05)}>5%</button>
 									<button className="button" onClick={()=>setTip(.10)}>10%</button>
 									<button className="button" onClick={()=>setTip(.15)}>15%</button>
 									<button className="button" onClick={()=>setTip(.25)}>25%</button>
 									<button className="button" onClick={()=>setTip(.5)}>50%</button>
-									<input className="button" placeholder="CUSTOM" onChange={(e)=>setTip(e.target.value)}></input>
+									<input  className="button" placeholder="CUSTOM" onChange={(e)=>setTip(e.target.value)}></input>
 								</div>
 							</div>
 
