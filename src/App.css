@@ -193,7 +193,6 @@ header{
 	.left-side{
 		width:45%;
 		height:95%;
-		margin-top: 20px;
 	}
 
 	.results-parent{
@@ -205,11 +204,12 @@ header{
 	}
 	.container{
 		align-items: center;
-		margin-top:80px;
+		margin-top:5%;
 	}
 
 	main{
 		min-width: 70%;
+		max-width: 80%;
 		border-radius: 25px;
 		height:50vh;
 	}
@@ -229,7 +229,7 @@ header{
 	}
 
 	.tip-selection-parent{
-		margin-bottom:40px;
+		margin-bottom:2.5rem;
 		/* margin-top:10px; */
 	}
 }
