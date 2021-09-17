@@ -6,8 +6,8 @@ import './App.css';
 function App() {
 
 	const [bill,setBill] = useState(0.00);
-	const [tipPerc,setTip] = useState(0.0);
-	const [people, setPeople] = useState(0);
+	const [tipPerc,setTip] = useState(0);
+	const [people, setPeople] = useState(1);
 	const [tipTotal,setTipTotal] = useState(0.00);
 	const [total, setTotal] = useState(0.00);
 
@@ -15,6 +15,7 @@ function App() {
 	
 	useEffect(() => {
 		console.log(bill,tipPerc,people)
+		console.log(CalcTotal(bill,tipPerc,people))
 		CalcTotal(bill,tipPerc,people)
 	  },[bill,tipPerc,people,tipTotal,total]);
 
@@ -26,12 +27,16 @@ function App() {
 		// settotal and tip total to 0.00
 		// if tip prop = 0 setTip 0
 		
-			let boo = billProp/peopleProp
-			console.log(boo)
-			setTotal(boo);
+		if(billProp === 0){
+			setTotal(0.00)
+			setTipTotal(0.00)
+		}else{
+			let boo = billProp/peopleProp;
+			setTotal(parseInt(boo));
 			let booTwo = ((billProp*tipProp) / peopleProp )
-			console.log(booTwo)
-			setTipTotal(booTwo)
+			setTipTotal(parseInt(booTwo))
+		}
+			
 		};
 
 
@@ -78,7 +83,7 @@ function App() {
 								</div>
 
 								<div className="party-input-parent">
-									<input type="number" placeholder="5" onChange={e => setPeople(e.target.value)} className="party-input" ></input>
+									<input type="number" placeholder="1" onChange={e => setPeople(e.target.value)} className="party-input" ></input>
 								</div>
 							</div>
 						</div>
