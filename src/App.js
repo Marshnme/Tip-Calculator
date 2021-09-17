@@ -22,11 +22,6 @@ function App() {
 
 	let CalcTotal = (billProp,tipProp,peopleProp) =>{
 		
-		// currently if values are missing we get NaN/infinity 
-		// if billprop or people prop = 0
-		// settotal and tip total to 0.00
-		// if tip prop = 0 setTip 0
-		
 		if(billProp === 0){
 			setTotal(0.00)
 			setTipTotal(0.00)
