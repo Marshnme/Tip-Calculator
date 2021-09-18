@@ -31,6 +31,7 @@ main{
 .calc-parent{
 	width:90%;
 	margin-top:1.5rem;
+	margin-bottom:25px;
 	display:flex;
 	flex-flow:column nowrap;
 	height:auto;
@@ -203,7 +204,7 @@ header{
 	.results-parent{
 		width:45%;
 		height:95%;
-		border-radius: 10px;
+		border-radius: 20px;
 		justify-content: space-around;
 	}
 	.container{

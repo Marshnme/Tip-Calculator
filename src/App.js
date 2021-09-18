@@ -5,26 +5,35 @@ import './App.css';
 
 function App() {
 
-	const [bill,setBill] = useState(0);
+	const [bill,setBill] = useState(0.00);
 	const [tipPerc,setTip] = useState(0);
-	const [people, setPeople] = useState(0);
-	const [tipTotal,setTipTotal] = useState(0);
-	const [total, setTotal] = useState(0);
+	const [people, setPeople] = useState(1);
+	const [tipTotal,setTipTotal] = useState(0.00);
+	const [total, setTotal] = useState(0.00);
+
+
+	
+	useEffect(() => {
+		console.log(bill,tipPerc,people)
+		console.log(CalcTotal(bill,tipPerc,people))
+		CalcTotal(bill,tipPerc,people)
+	  },[bill,tipPerc,people,tipTotal,total]);
 
 
 	let CalcTotal = (billProp,tipProp,peopleProp) =>{
-		let boo = billProp/peopleProp
-		console.log(boo)
-		setTotal(boo);
-		let booTwo = ((billProp*tipProp) / peopleProp )
-		console.log(booTwo)
-		setTipTotal(booTwo);
-	};
-	console.log(bill)
-	useEffect(() => {
-		console.log(bill,tipPerc,people)
-		CalcTotal(bill,tipPerc,people)
-	  },[bill,tipPerc,people,tipTotal,total]);
+		
+		if(billProp === 0){
+			setTotal(0.00)
+			setTipTotal(0.00)
+		}else{
+			let boo = billProp/peopleProp;
+			setTotal(parseInt(boo));
+			let booTwo = ((billProp*tipProp) / peopleProp )
+			setTipTotal(parseInt(booTwo))
+		}
+			
+		};
+
 
 	return (
     	<div className="App">
@@ -59,6 +68,7 @@ function App() {
 									<button className="button" onClick={()=>setTip(.25)}>25%</button>
 									<button className="button" onClick={()=>setTip(.5)}>50%</button>
 									<input  className="button" placeholder="CUSTOM" onChange={(e)=>setTip(e.target.value)}></input>
+									{/* need to include a perc to decimal function for the custom input */}
 								</div>
 							</div>
 
@@ -68,7 +78,7 @@ function App() {
 								</div>
 
 								<div className="party-input-parent">
-									<input type="number" placeholder="5" onChange={e => setPeople(e.target.value)} className="party-input" ></input>
+									<input type="number" placeholder="1" onChange={e => setPeople(e.target.value)} className="party-input" ></input>
 								</div>
 							</div>
 						</div>
