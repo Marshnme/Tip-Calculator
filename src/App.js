@@ -23,13 +23,13 @@ function App() {
 	let CalcTotal = (billProp,tipProp,peopleProp) =>{
 		
 		if(billProp === 0){
-			setTotal(0.00)
-			setTipTotal(0.00)
+			setTotal(0.00.toFixed(2))
+			setTipTotal(0.00.toFixed(2))
 		}else{
-			let boo = billProp/peopleProp;
-			setTotal(parseInt(boo));
-			let booTwo = ((billProp*tipProp) / peopleProp )
-			setTipTotal(parseInt(booTwo))
+			let newTotal = billProp/peopleProp;
+			setTotal("$" + newTotal.toFixed(2));
+			let newTip = ((billProp*tipProp) / peopleProp )
+			setTipTotal("$" + newTip.toFixed(2))
 		}
 			
 		};
