@@ -26,10 +26,10 @@ function App() {
 			setTotal(0.00)
 			setTipTotal(0.00)
 		}else{
-			let boo = billProp/peopleProp;
-			setTotal(parseInt(boo));
-			let booTwo = ((billProp*tipProp) / peopleProp )
-			setTipTotal(parseInt(booTwo))
+			let newTotal = billProp/peopleProp;
+			setTotal(newTotal.toFixed(2) + " $");
+			let newTip = ((billProp*tipProp) / peopleProp )
+			setTipTotal(newTip.toFixed(2) + " $")
 		}
 			
 		};
