@@ -153,6 +153,7 @@ header{
 	height:32vh;	
 	/* margin-bottom:2rem; */
 	border:1px solid green;
+	border-radius: 20px;
 	background-color: rgb(48, 88, 86);
 	color:white;
 }
@@ -199,6 +200,10 @@ header{
 	.left-side{
 		width:45%;
 		height:95%;
+		display:flex;
+		flex-flow:column nowrap;
+		justify-content: center;
+		
 	}
 
 	.results-parent{
@@ -216,7 +221,7 @@ header{
 		min-width: 70%;
 		max-width: 80%;
 		border-radius: 25px;
-		height:50vh;
+		height:60vh;
 	}
 
 	.perc-buttons{
