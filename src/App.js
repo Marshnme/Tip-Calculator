@@ -23,8 +23,8 @@ function App() {
 	let CalcTotal = (billProp,tipProp,peopleProp) =>{
 		
 		if(billProp === 0){
-			setTotal(0.00.toFixed(2))
-			setTipTotal(0.00.toFixed(2))
+			setTotal("$" + 0.00.toFixed(2))
+			setTipTotal("$" + 0.00.toFixed(2))
 		}else{
 			let newTotal = billProp/peopleProp;
 			setTotal("$" + newTotal.toFixed(2));
