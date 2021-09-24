@@ -99,6 +99,7 @@ header{
 	flex-flow:row wrap;
 	align-items: space-around;
 	justify-content: space-between;
+	
 
 }
 
@@ -107,7 +108,7 @@ header{
 	height:5vh;
 	color:white;
 	background-color: rgb(48, 88, 86);
-	
+	text-align: center;
 }
 
 
@@ -150,7 +151,7 @@ header{
 	justify-content: space-around;
 	/* border:1px solid blue; */
 	/* width:100%; */
-	height:32vh;	
+	height:30vh;	
 	/* margin-bottom:2rem; */
 	border:1px solid green;
 	border-radius: 20px;
@@ -181,6 +182,8 @@ header{
 .reset-button{
 	width:90%;
 	height:5vh;
+	border:1px solid rgba(255, 0, 0, 0);
+	border-radius: 5px;
 }
 
 .attribution{
@@ -188,6 +191,11 @@ header{
 	text-align: center;
 }
 
+input{
+	border:0px;
+	background-color: rgb(244, 246, 255);
+	border-radius: 6px;
+}
 /* 800 PX MEDIA QUERY */
 @media only screen and (min-width: 800px) {
 	.calc-parent{
@@ -202,7 +210,7 @@ header{
 		height:95%;
 		display:flex;
 		flex-flow:column nowrap;
-		justify-content: center;
+		justify-content: space-around;
 		
 	}
 
@@ -229,17 +237,19 @@ header{
 		height:13vh;
 		display:flex;
 		flex-flow:row wrap;
+		
 	
 	}
 	
 	.button{
 		width:30%;
 		/* height:10vh; */
-		
+		border: 1px solid rgb(48, 88, 86);
+		border-radius: 5px;
 	}
 
 	.tip-selection-parent{
 		margin-bottom:2.5rem;
-		/* margin-top:10px; */
+		 /* margin-top:10px; */
 	}
-}
+} 
